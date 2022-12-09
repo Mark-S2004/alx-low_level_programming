@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	short int st_num, nd_num, rd_num, th_num;
+	short digit1_1, digit1_2, digit2_1, digit2_2;
 
-	for (st_num = 48; st_num < 58; st_num++)
+	for (digit1_1 = 48; digit1_1 <= 57; digit1_1++)
 	{
-		for (nd_num = st_num; nd_num < 58; nd_num++)
+		for (digit1_2 = 48; digit1_2 <= 56; digit1_2++)
 		{
-			for (rd_num = 48; rd_num < 58; rd_num++)
+			for (digit2_1 = digit1_1; digit2_1 <= 57; digit2_1++)
 			{
-				for (th_num = rd_num; th_num < 58; th_num++)
+				for (digit2_2 = digit1_2 + 1; digit2_2 <= 57; digit2_2++)
 				{
-					putchar(st_num);
-					putchar(nd_num);
+					putchar(digit1_1);
+					putchar(digit1_2);
 					putchar(' ');
-					putchar(rd_num);
-					putchar(th_num);
-					if (st_num + nd_num + rd_num + th_num != 228)
+					putchar(digit2_1);
+					putchar(digit2_2);
+					if (digit1_1 + digit1_2 + digit2_1 + digit2_2 != 227)
 					{
 						putchar(',');
 						putchar(' ');
@@ -31,6 +31,7 @@ int main(void)
 			}
 		}
 	}
+		
 	putchar('\n');
 	return (0);
 }
