@@ -20,7 +20,7 @@ int main(void)
 					temp = digit1_2 + 1;
 				} else
 				{
-					temp = 0;
+					temp = 48;
 				}
 				for (digit2_2 = temp; digit2_2 <= 57; digit2_2++)
 				{
