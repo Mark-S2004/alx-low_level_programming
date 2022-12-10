@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	short digit1_1, digit1_2, digit2_1, digit2_2;
+	short digit1_1, digit1_2, digit2_1, digit2_2, temp;
 
 	for (digit1_1 = 48; digit1_1 <= 57; digit1_1++)
 	{
@@ -15,7 +15,14 @@ int main(void)
 		{
 			for (digit2_1 = digit1_1; digit2_1 <= 57; digit2_1++)
 			{
-				for (digit2_2 = digit1_2 + 1; digit2_2 <= 57; digit2_2++)
+				if (digit2_1 == digit1_1)
+				{
+					temp = digit1_2 + 1;
+				} else
+				{
+					temp = 0;
+				}
+				for (digit2_2 = temp; digit2_2 <= 57; digit2_2++)
 				{
 					putchar(digit1_1);
 					putchar(digit1_2);
@@ -31,7 +38,6 @@ int main(void)
 			}
 		}
 	}
-		
 	putchar('\n');
 	return (0);
 }
