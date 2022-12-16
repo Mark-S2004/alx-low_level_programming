@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
-  * print_line - Print a line using the character '_' @n times followed by a new line
+  * print_line - Print a line using the character '_' @n times
+  * followed by a new line
   * @n: The length of the line
   * Return: None
   */
