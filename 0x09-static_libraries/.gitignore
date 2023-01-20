@@ -1,3 +1,5 @@
 main.c
 a.out
-_putchar.c
+_putchar.[co]
+[[:digit:]]*.c
+[[:digit:]]*.o
