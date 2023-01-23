@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 {
 	int i, j, num1, num2, mul, strlen = 0, temp;
 	char *s;
-	
+
 	/* Check if there is two arguments passed */
 	if (argc != 3)
 	{
-		print_error();	
+		print_error();
 	}
 	/* Check if these two arguments are numbers */
 	while (--argc)
