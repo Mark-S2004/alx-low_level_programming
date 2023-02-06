@@ -10,7 +10,7 @@
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, w, strlen = 0, i = 0;
+	int fd, w, strlen = 0;
 
 	if (!filename)
 	{
@@ -19,10 +19,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (text_content)
 	{
-		while (text_content[i] != '\0')
+		while (text_content[strlen] != '\0')
 		{
 			strlen++;
-			i++;
 		}	
 		w = write(fd, text_content, strlen);
 	}
@@ -30,6 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	close(fd);
 
 	return (1);
 }
