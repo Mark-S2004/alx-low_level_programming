@@ -14,24 +14,22 @@ size_t read_textfile(const char *filename, size_t letters)
 	int fd, r, w;
 	char *buffer;
 
-	buffer = malloc(letters);
 	if (!filename)
 	{
 		return (0);
 	}
+	buffer = malloc(letters);
+	if (!buffer)
+	{
+		free(buffer);
+		return (0);
+	}
 	fd = open(filename, O_RDWR);
-	if (fd == -1)
-	{
-		return (0);
-	}
 	r = read(fd, buffer, letters);
-	if (r == -1)
+	w = write(STDOUT_FILENO, buffer, r);
+	if (fd == -1 || r == -1 || w == -1)
 	{
-		return (0);
-	}
-	w = write(STDOUT_FILENO, buffer, letters);
-	if (w == -1)
-	{
+		free(buffer);
 		return (0);
 	}
 	close(fd);
