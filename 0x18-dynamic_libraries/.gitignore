@@ -1,3 +1,5 @@
 a.out
-*.[co]
+[[:digit:]]*.[co]
+operations.c
+main.c
 _putchar.c
